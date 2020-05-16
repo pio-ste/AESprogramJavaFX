@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1100.0" styleClass="bodybg" stylesheets="@../css/menuCSS.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.aes.program.Controller.PrimaryController">
+   <children>
+      <Button fx:id="goToEncryptDecryptButton" layoutX="419.0" layoutY="199.0" mnemonicParsing="false" onAction="#goToEncryptDecrypt" prefHeight="75.0" prefWidth="263.0" styleClass="toggle-button" stylesheets="@../css/menuCSS.css" text="Szyfrowanie/deszyfrowanie plików" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Button>
+      <Button fx:id="goToOptionsButton" layoutX="418.0" layoutY="289.0" mnemonicParsing="false" onAction="#goToOptions" prefHeight="75.0" prefWidth="263.0" styleClass="toggle-button" stylesheets="@../css/menuCSS.css" text="Opcje">
+         <opaqueInsets>
+            <Insets bottom="10.0" />
+         </opaqueInsets>
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="exitButton" layoutX="418.0" layoutY="374.0" mnemonicParsing="false" onAction="#exitProgram" prefHeight="75.0" prefWidth="263.0" styleClass="toggle-button" stylesheets="@../css/menuCSS.css" text="Wyjście">
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+   </children>
+</Pane>
