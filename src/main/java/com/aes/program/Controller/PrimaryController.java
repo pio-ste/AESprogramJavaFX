@@ -21,8 +21,13 @@ public class PrimaryController {
     void initialize(){
     }
 
-    public void goToEncryptDecrypt(ActionEvent actionEvent) {
+    public void goToEncryptDecrypt(ActionEvent actionEvent) throws IOException {
+        Parent parent = FXMLLoader.load(getClass().getResource("/com/aes/program/FXML/encryptDecrypt.fxml"));
+        Scene scene = new Scene(parent);
 
+        Stage stage = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
     }
 
     @FXML
@@ -35,6 +40,7 @@ public class PrimaryController {
         stage.show();
     }
 
+    @FXML
     public void exitProgram(ActionEvent actionEvent) {
         Stage stage = (Stage) exitButton.getScene().getWindow();
         stage.close();
