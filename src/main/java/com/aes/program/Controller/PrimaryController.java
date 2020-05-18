@@ -21,15 +21,6 @@ public class PrimaryController {
     void initialize(){
     }
 
-    public void goToEncryptDecrypt(ActionEvent actionEvent) throws IOException {
-        Parent parent = FXMLLoader.load(getClass().getResource("/com/aes/program/FXML/encryptDecrypt.fxml"));
-        Scene scene = new Scene(parent);
-
-        Stage stage = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
-        stage.setScene(scene);
-        stage.show();
-    }
-
     @FXML
     public void goToOptions(ActionEvent actionEvent) throws IOException {
         Parent parent = FXMLLoader.load(getClass().getResource("/com/aes/program/FXML/options.fxml"));
@@ -44,5 +35,23 @@ public class PrimaryController {
     public void exitProgram(ActionEvent actionEvent) {
         Stage stage = (Stage) exitButton.getScene().getWindow();
         stage.close();
+    }
+
+    public void goToDecrypt(ActionEvent actionEvent) throws IOException {
+        Parent parent = FXMLLoader.load(getClass().getResource("/com/aes/program/FXML/decrypt.fxml"));
+        Scene scene = new Scene(parent);
+
+        Stage stage = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public void goToEncrypt(ActionEvent actionEvent) throws IOException {
+        Parent parent = FXMLLoader.load(getClass().getResource("/com/aes/program/FXML/encrypt.fxml"));
+        Scene scene = new Scene(parent);
+
+        Stage stage = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
     }
 }
