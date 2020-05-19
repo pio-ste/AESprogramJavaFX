@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.aes.program.Controller.DecryptController">
+<Pane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.aes.program.Controller.DecryptController">
    <children>
       <Button layoutX="1034.0" layoutY="661.0" mnemonicParsing="false" onAction="#goToMenu" styleClass="toggle-button" stylesheets="@../css/menuCSS.css" text="Powrót" />
       <Button fx:id="chooseFileBTN" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#chooseFile" style="-fx-background-color: #00A6FF;" text="Wybierz pliki" />
@@ -24,7 +24,7 @@
       </Label>
       <ListView fx:id="listViewCert" layoutX="461.0" layoutY="161.0" prefHeight="25.0" prefWidth="200.0" />
       <Button fx:id="certFileBTN" layoutX="461.0" layoutY="124.0" mnemonicParsing="false" onAction="#chooseCertFile" style="-fx-background-color: #00A6FF;" text="Wybierz plik z certyfikatem" />
-      <Button fx:id="decryptBTN" layoutX="505.0" layoutY="380.0" mnemonicParsing="false" onAction="#decryptFile" text="Deszyfruj pliki" />
+      <Button fx:id="decryptBTN" layoutX="505.0" layoutY="443.0" mnemonicParsing="false" onAction="#decryptFile" text="Deszyfruj pliki" />
       <CheckBox fx:id="desCheckBox" layoutX="614.0" layoutY="220.0" mnemonicParsing="false" onAction="#handleDEScheckBox" text="DES" textFill="#030303">
          <font>
             <Font name="System Bold" size="12.0" />
@@ -43,5 +43,13 @@
          </items>
       </MenuButton>
       <TextField fx:id="textFieldKeyValue" editable="false" layoutX="461.0" layoutY="297.0" prefHeight="25.0" prefWidth="200.0" promptText="Długość klucza" />
+      <CheckBox fx:id="multiThreadingCheckBox" layoutX="459.0" layoutY="403.0" mnemonicParsing="false" onAction="#handleMultiThreading" text="Wykorzystaj wielowątkowość" />
+      <Label layoutX="461.0" layoutY="334.0" text="Tryb pracy algorytmu">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <CheckBox fx:id="ecbCheckBox" layoutX="457.0" layoutY="366.0" mnemonicParsing="false" onAction="#handleEcbCheckBox" text="ECB" />
+      <CheckBox fx:id="cbcCheckBox" layoutX="614.0" layoutY="366.0" mnemonicParsing="false" onAction="#handleCbcCheckBox" text="CBC" />
    </children>
 </Pane>
